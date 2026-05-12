@@ -1,0 +1,2 @@
+fecha,hora,id_delito,distrito,direccion,latitud,longitud,id_comisaria,fuente_registro,descripcion
+fecha-invalida,25:99,999,DISTRITO DEMO INVALIDO,Direccion sintetica sin coordenadas,,,999,SAMPLE_SYNTHETIC_INVALID,Registro sintetico invalido para probar validaciones

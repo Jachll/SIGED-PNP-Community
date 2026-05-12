@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-label="Mapa sintetico SIGED Community">
+  <rect width="960" height="640" fill="#e8eef0"/>
+  <path d="M0 108c150 42 240-28 380 14 160 48 280-14 580 30v488H0Z" fill="#d7e4d6"/>
+  <path d="M0 408c190-82 310 24 480-34 150-50 285-20 480 30v236H0Z" fill="#b9d2c4"/>
+  <path d="M100 92 260 260 430 210 602 408 812 320" fill="none" stroke="#f2c94c" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 470 280 370 480 438 650 300 880 500" fill="none" stroke="#12343b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
+  <g fill="#d95f43" stroke="#f7f3e8" stroke-width="8">
+    <circle cx="260" cy="260" r="18"/>
+    <circle cx="602" cy="408" r="18"/>
+    <circle cx="812" cy="320" r="18"/>
+    <circle cx="480" cy="438" r="18"/>
+  </g>
+</svg>

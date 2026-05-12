@@ -1,0 +1,74 @@
+# Python
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environment
+.env
+.env.*
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# Backend local state
+backend/.env
+backend/.venv/
+backend/.pytest_cache/
+backend/uploads/
+backend/*.log
+backend/diagnostic-*.json
+backend/runtime-*.json
+backend/runtime-*.log
+
+# Frontend local state
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+frontend/runtime-artifacts/
+frontend/diagnostic-*
+
+# Operational outputs
+scripts/logs/
+database/backups/
+salida_geojson/
+uploads/
+logs/
+backups/
+
+# Private or uncertain data assets
+*.xlsx
+*.xls
+*.csv
+!database/sample_data/*.csv
+*.geojson
+*.shp
+*.dbf
+*.prj
+*.cpg
+*.qpj
+*.gpkg
+*.zip
+
+# Private or uncertain visual assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+!frontend/public/icons/*.svg
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+*.swp
+~$*
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

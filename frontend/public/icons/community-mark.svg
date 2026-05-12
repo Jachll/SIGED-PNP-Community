@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="SIGED Community">
+  <rect width="96" height="96" rx="20" fill="#12343b"/>
+  <path d="M48 14 76 26v19c0 18-11 31-28 37-17-6-28-19-28-37V26l28-12Z" fill="#f2c94c"/>
+  <path d="M48 24 66 32v13c0 12-7 21-18 26-11-5-18-14-18-26V32l18-8Z" fill="#145c4a"/>
+  <circle cx="48" cy="46" r="10" fill="#f7f3e8"/>
+  <path d="M48 35v22M37 46h22" stroke="#12343b" stroke-width="5" stroke-linecap="round"/>
+</svg>

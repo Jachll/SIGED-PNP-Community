@@ -1,0 +1,31 @@
+{
+  "name": "siged-pnp-frontend",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "lint": "node scripts/lint.mjs",
+    "test": "node --test tests",
+    "check": "npm run lint && npm run test && npm run build",
+    "build": "vite build",
+    "preview": "vite preview",
+    "e2e:smoke": "node e2e/run-smoke.js",
+    "e2e:a11y": "node e2e/run-accessibility-smoke.js",
+    "e2e:smoke:playwright": "playwright test --config=playwright.config.js"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.3",
+    "leaflet": "^1.9.4",
+    "leaflet.heat": "^0.2.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.0"
+  }
+}

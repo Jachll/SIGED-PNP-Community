@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Marcador SIGED Community">
+  <path d="M32 4c-12 0-22 10-22 22 0 17 22 34 22 34s22-17 22-34C54 14 44 4 32 4Z" fill="#d95f43"/>
+  <circle cx="32" cy="26" r="10" fill="#f7f3e8"/>
+  <circle cx="32" cy="26" r="4" fill="#12343b"/>
+</svg>

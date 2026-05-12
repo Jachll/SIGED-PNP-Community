@@ -1,0 +1,7 @@
+fecha,hora,id_delito,distrito,direccion,latitud,longitud,id_comisaria,fuente_registro,descripcion
+2026-01-05,08:15,1,DISTRITO DEMO NORTE,Av. Sintetica 100,0.0101,-0.0101,1,SAMPLE_SYNTHETIC,Evento sintetico para pruebas de carga
+2026-01-05,12:40,2,DISTRITO DEMO CENTRO,Jr. Ejemplo 200,0.0115,-0.0120,2,SAMPLE_SYNTHETIC,Evento sintetico sin datos reales
+2026-01-06,19:30,3,DISTRITO DEMO SUR,Calle Prueba 300,0.0098,-0.0132,3,SAMPLE_SYNTHETIC,Registro ficticio para demo
+2026-01-07,22:10,4,DISTRITO DEMO ESTE,Av. Muestra 400,0.0130,-0.0099,4,SAMPLE_SYNTHETIC,Registro ficticio para validacion
+2026-01-08,06:55,5,DISTRITO DEMO OESTE,Jr. Demostracion 500,0.0085,-0.0110,5,SAMPLE_SYNTHETIC,Evento sintetico de baja complejidad
+2026-01-09,16:25,6,DISTRITO DEMO RURAL,Camino Local 600,0.0142,-0.0144,6,SAMPLE_SYNTHETIC,Evento sintetico para analitica temporal
