@@ -59,6 +59,11 @@ backups/
 *.jpeg
 *.gif
 !frontend/public/icons/*.svg
+!docs/screenshots/
+!docs/screenshots/*.png
+!docs/screenshots/*.jpg
+!docs/screenshots/*.jpeg
+!docs/screenshots/*.webp
 
 # Temporary files
 *.tmp

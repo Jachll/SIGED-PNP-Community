@@ -5,13 +5,15 @@
 [![Backend](https://img.shields.io/badge/backend-FastAPI-009688.svg)](backend/)
 [![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20Vite-646cff.svg)](frontend/)
 
-SIGED-PNP Community es una base open source para inteligencia geoespacial del delito, analítica territorial operativa y visualización de eventos en mapas. Esta edición pública incluye código, documentación, pruebas, CI y datos sintéticos mínimos.
+SIGED-PNP Community is an open-source geospatial crime intelligence platform built with FastAPI, PostgreSQL/PostGIS, React, Leaflet and Chart.js.
 
-El repositorio público no incluye mapas institucionales privados, capas territoriales reales, datos policiales reales, archivos geográficos no públicos ni imágenes con derechos inciertos.
+Esta edición pública sirve como base técnica para análisis territorial operativo, carga tabular por lotes, dashboard geoespacial y colaboración open source. Incluye código, documentación, pruebas, CI y datos sintéticos mínimos.
+
+**Importante:** este repositorio no incluye datos policiales reales, mapas institucionales privados, capas territoriales reales, GeoJSON/shapefiles/geopackages privados, credenciales ni imágenes con derechos inciertos.
 
 ## Why SIGED-PNP?
 
-Los equipos territoriales necesitan convertir registros dispersos en señales operativas: concentración espacial, horarios críticos, evolución temporal, carga por jurisdicción y recomendaciones de patrullaje. SIGED-PNP ofrece una base mantenible para construir ese flujo con herramientas abiertas y una arquitectura clara.
+Los equipos territoriales necesitan convertir registros dispersos en señales operativas: concentración espacial, horarios críticos, evolución temporal, carga por jurisdicción y recomendaciones. SIGED-PNP Community ofrece una base mantenible para construir ese flujo con herramientas abiertas y reglas claras de seguridad de datos.
 
 ## Features
 
@@ -23,12 +25,12 @@ Los equipos territoriales necesitan convertir registros dispersos en señales op
 - Frontend `React + Vite + Leaflet + Chart.js`.
 - Dashboard operacional, analítica temporal, mapa, filtros y recomendaciones.
 - Flujo territorial por región, división, comisaría, jurisdicción y sector.
-- Pruebas backend con `pytest`, pruebas frontend con `node --test` y CI en GitHub Actions.
+- Pruebas backend/frontend y CI en GitHub Actions.
 
 ## Architecture
 
 ```text
-CSV/XLSX sintetico
+CSV sintetico
     -> scripts Python o API /cargas/lotes
     -> staging_eventos + lotes_carga
     -> validacion y promocion
@@ -37,32 +39,20 @@ CSV/XLSX sintetico
     -> React + Leaflet + Chart.js
 ```
 
-Backend:
-
-- `backend/app/api/routers/`: rutas HTTP y seguridad.
-- `backend/app/services/`: casos de uso y reglas de negocio.
-- `backend/app/repositories/`: SQL y acceso a datos.
-- `backend/app/schemas/`: contratos de entrada y salida.
-- `backend/app/etl/`: pipeline tabular y asignación territorial.
-
-Frontend:
-
-- `frontend/src/pages/`: vistas principales.
-- `frontend/src/components/`: mapa, filtros, overlays y paneles.
-- `frontend/src/hooks/`: jerarquía territorial, capas y modelos compartidos.
-- `frontend/src/services/api.js`: cliente HTTP centralizado.
+Detalles: [`docs/architecture.md`](docs/architecture.md).
 
 ## Public Data Policy
 
 - `database/sample_data/` contiene únicamente datos sintéticos de demostración.
-- No se incluyen datos policiales reales ni información operativa real.
 - `salida_geojson/` está ignorado y debe cargarse localmente.
-- Cada institución debe aportar sus propias capas territoriales y validar su permiso de uso.
-- No publiques GeoJSON, shapefiles, geopackages, Excel, CSV o imágenes institucionales si su origen no es explícitamente público o sintético.
+- Cada institución debe aportar sus propias capas territoriales y validar permisos de uso.
+- No publiques datos reales, mapas privados, GeoJSON, shapefiles, geopackages, Excel/CSV de origen incierto ni imágenes institucionales dudosas.
+
+Guía completa: [`docs/data-safety.md`](docs/data-safety.md).
 
 ## Quickstart
 
-### Backend
+Backend:
 
 ```powershell
 cd SIGED-PNP-Community\backend
@@ -74,7 +64,7 @@ Copy-Item .env.example .env
 python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### Frontend
+Frontend:
 
 ```powershell
 cd SIGED-PNP-Community\frontend
@@ -82,16 +72,14 @@ npm ci
 npm run dev
 ```
 
-### Database
-
-Sigue [`docs/database.md`](docs/database.md) para crear `siged_pnp`, ejecutar las migraciones `database/sql/` y cargar datos sintéticos.
-
-Ejemplo de carga:
+Base de datos y carga sintética:
 
 ```powershell
 cd SIGED-PNP-Community
 .\backend\.venv\Scripts\python.exe .\scripts\import_csv_lotes.py --input .\database\sample_data\eventos_delictivos_sample.csv --observaciones "Carga sintética inicial"
 ```
+
+Demo paso a paso: [`docs/demo.md`](docs/demo.md). Base de datos: [`docs/database.md`](docs/database.md).
 
 ## Testing
 
@@ -114,13 +102,28 @@ npm run test
 npm run build
 ```
 
+## Documentation
+
+- Demo local: [`docs/demo.md`](docs/demo.md)
+- Arquitectura: [`docs/architecture.md`](docs/architecture.md)
+- Seguridad de datos: [`docs/data-safety.md`](docs/data-safety.md)
+- API y roles: [`docs/api.md`](docs/api.md)
+- Base de datos: [`docs/database.md`](docs/database.md)
+- Readiness open source: [`docs/open-source-readiness.md`](docs/open-source-readiness.md)
+- Checklist GitHub: [`docs/github-publication-checklist.md`](docs/github-publication-checklist.md)
+- Issues iniciales sugeridas: [`docs/initial-issues.md`](docs/initial-issues.md)
+
 ## Screenshots
 
-Esta edición no incluye capturas con mapas o activos institucionales. Para publicar screenshots, usa datos sintéticos y mapas/capas con permiso explícito de publicación.
+No se incluyen capturas con mapas o activos institucionales. Para agregar screenshots:
+
+- Usa solo datos sintéticos.
+- Usa mapas/capas propias, sintéticas o explícitamente públicas.
+- Verifica que no aparezcan rutas internas, usuarios, coordenadas sensibles ni información operativa real.
 
 ## Open Source Status
 
-Este proyecto está en fase `v0.2.0-alpha`: útil para evaluación, demostración y colaboración técnica, pero requiere revisión de seguridad, despliegue y datos antes de cualquier uso operativo real.
+`v0.2.0-alpha` es una edición pública inicial para evaluación, demo y colaboración técnica. Requiere revisión de seguridad, despliegue y datos antes de cualquier uso operativo real.
 
 ## Roadmap
 

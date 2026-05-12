@@ -7,7 +7,7 @@
 - Inclusión de datos sintéticos mínimos para pruebas.
 - Documentación open source inicial.
 
-## v0.2.0-alpha
+## v0.2.0-alpha - Initial public community release
 
 - Backend FastAPI organizado por capas.
 - Acceso a datos con SQL directo y repositories.
@@ -17,4 +17,8 @@
 - Autenticación JWT por roles.
 - Dashboard operacional y analítica temporal.
 - Flujo territorial por región, división, comisaría, jurisdicción y sector.
+- Datos sintéticos mínimos para demo y pruebas.
+- Documentación open source inicial.
+- Templates de issues y pull requests.
+- Sin mapas privados, capas territoriales reales ni datos policiales reales.
 - Pruebas backend/frontend y CI básico.
